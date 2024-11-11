@@ -1,14 +1,10 @@
-<h1 align="center">Linkedin Clone ✨</h1>
+<h1 align="center">Linkify ✨</h1>
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+<h3 align="center"> This is a full stack Linkedin Clone where users can connect with each other, share and interact with the post, users recive email for the same </h3>
 
-[Video Tutorial on Youtube](https://youtu.be/Ycg48pVp3SU)
-
-About This Course:
 
 -   🚀 Project Setup
 -   🗄️ MongoDB Integration
--   💳 Stripe Payment Setup
 -   🔐 Authentication System with JWT
 -   ✉️ Welcome Emails
 -   🎨 Design with Tailwind & DaisyUI
