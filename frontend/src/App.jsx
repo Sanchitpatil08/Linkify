@@ -17,12 +17,7 @@ function App() {
 		queryKey: ["authUser"],
 		queryFn: async () => {
 			try {
-				axios.get("https://linkify-7zdi.onrender.com/api/v1/auth/me", {
-					withCredentials: true, // Ensures cookies are sent
-				})
-				.then(response => console.log(response.data))
-				.catch(error => console.error("Error:", error));
-				
+				const res = await axiosInstance.get("/auth/me");
 				return res.data;
 			} catch (err) {
 				if (err.response && err.response.status === 401) {
