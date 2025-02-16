@@ -17,7 +17,12 @@ function App() {
 		queryKey: ["authUser"],
 		queryFn: async () => {
 			try {
-				const res = await axiosInstance.get("/auth/me");
+				const res = await axiosInstance.get("/auth/me",{
+					headers: {
+						Authorization: `Bearer ${localStorage.getItem("token")}`,
+					},
+					withCredentials: true, // If using cookies
+				});
 				return res.data;
 			} catch (err) {
 				if (err.response && err.response.status === 401) {
