@@ -17,12 +17,12 @@ function App() {
 		queryKey: ["authUser"],
 		queryFn: async () => {
 			try {
-				const res = await axiosInstance.get("/auth/me",{
-					headers: {
-						Authorization: `Bearer ${localStorage.getItem("token")}`,
-					},
-					withCredentials: true, // If using cookies
-				});
+				axios.get("https://linkify-7zdi.onrender.com/api/v1/auth/me", {
+					withCredentials: true, // Ensures cookies are sent
+				})
+				.then(response => console.log(response.data))
+				.catch(error => console.error("Error:", error));
+				
 				return res.data;
 			} catch (err) {
 				if (err.response && err.response.status === 401) {
